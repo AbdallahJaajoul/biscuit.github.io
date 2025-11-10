@@ -11,8 +11,8 @@ document.getElementById("form-avaliacao").addEventListener("submit", function(e)
   appId: "1:551726007541:web:9b7e47358ab57ccbd9f1bc"
 };
 
-  firebase.initializeApp(firebaseConfig);
-const db = firebase.database();
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
   
   const nome = document.getElementById("nome").value.trim();
   const comentario = document.getElementById("comentario").value.trim();
