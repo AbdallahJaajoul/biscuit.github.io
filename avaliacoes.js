@@ -10,6 +10,9 @@ document.getElementById("form-avaliacao").addEventListener("submit", function(e)
   messagingSenderId: "551726007541",
   appId: "1:551726007541:web:9b7e47358ab57ccbd9f1bc"
 };
+
+  firebase.initializeApp(firebaseConfig);
+const db = firebase.database();
   
   const nome = document.getElementById("nome").value.trim();
   const comentario = document.getElementById("comentario").value.trim();
