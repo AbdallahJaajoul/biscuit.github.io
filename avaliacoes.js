@@ -1,6 +1,16 @@
 document.getElementById("form-avaliacao").addEventListener("submit", function(e) {
   e.preventDefault();
 
+  const firebaseConfig = {
+  apiKey: "AIzaSyBcanFKEo5vYy_qptBTrp8gSqgM2gttd48",
+  authDomain: "biscuit-avaliacoes.firebaseapp.com",
+  databaseURL: "https://biscuit-avaliacoes-default-rtdb.firebaseio.com",
+  projectId: "biscuit-avaliacoes",
+  storageBucket: "biscuit-avaliacoes.firebasestorage.app",
+  messagingSenderId: "551726007541",
+  appId: "1:551726007541:web:9b7e47358ab57ccbd9f1bc"
+};
+  
   const nome = document.getElementById("nome").value.trim();
   const comentario = document.getElementById("comentario").value.trim();
   const avaliacao = document.getElementById("avaliacao").value;
@@ -32,15 +42,4 @@ function mostrarAvaliacoes() {
     container.appendChild(bloco);
   });
 }
-
-const firebaseConfig = {
-  apiKey: "AIzaSyBcanFKEo5vYy_qptBTrp8gSqgM2gttd48",
-  authDomain: "biscuit-avaliacoes.firebaseapp.com",
-  databaseURL: "https://biscuit-avaliacoes-default-rtdb.firebaseio.com",
-  projectId: "biscuit-avaliacoes",
-  storageBucket: "biscuit-avaliacoes.firebasestorage.app",
-  messagingSenderId: "551726007541",
-  appId: "1:551726007541:web:9b7e47358ab57ccbd9f1bc"
-};
-
 mostrarAvaliacoes();
