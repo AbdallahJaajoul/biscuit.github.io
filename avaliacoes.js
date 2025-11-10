@@ -9,7 +9,10 @@ const firebaseConfig = {
   appId: "1:551726007541:web:9b7e47358ab57ccbd9f1bc"
 };
 
-firebase.initializeApp(firebaseConfig);
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+import { getDatabase, ref, push, onValue } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+
+const app = initializeApp(firebaseConfig);
 const db = firebase.database();
 
 // Enviar avaliação para Firebase
